@@ -11,8 +11,6 @@
 
 The solution is implemented in Selection.java, and below is screenshot of the result.
 
-![Screenshot](img/img1.png)
-
 **Brief explanaton:** There are 4 main step: 
 1. Input all grades
 2. Validate the input
