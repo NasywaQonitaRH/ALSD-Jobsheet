@@ -23,8 +23,17 @@ The solution is implemented in Selection.java, and below is screenshot of the re
 3. Calculate and convert the final grade
 4. Decide the final status
 
-## 2.1.2. Looping Solution
+## 2.2.1. Looping Solution
 The solution is implemented in Selection.java, and below is screenshot of the result.
 
 ![Image](https://github.com/user-attachments/assets/243a085c-15a4-4e4a-b7e3-4c1e26177a9e)
 ![Image](https://github.com/user-attachments/assets/99b18381-e0ab-494b-8d36-3739f480514e)
+
+## 2.3.1. Array Solution
+The solution is implemented in Selection.java, and below is screenshot of the result.
+
+![Image](https://github.com/user-attachments/assets/86feeb25-076d-4465-951f-eef4e29d6bdc)
+
+## 2.4.1. Function Solution
+The solution is implemented in Selection.java, and below is screenshot of the result.
+
