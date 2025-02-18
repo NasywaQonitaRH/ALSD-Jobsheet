@@ -57,7 +57,7 @@ The solution is implemented in Selection.java, and below is screenshot of the re
 
 ![Image](https://github.com/user-attachments/assets/86feeb25-076d-4465-951f-eef4e29d6bdc)
 
-**Brief explanaton:** There are 3 main step:
+**Brief explanaton:** There are 4 main step:
 1. User Input  
    - The user enters the number of courses.  
    - For each course, the user inputs:  
@@ -72,9 +72,7 @@ The solution is implemented in Selection.java, and below is screenshot of the re
 4. GPA Calculation
    - The total weighted grade points (`bobot nilai * SKS`) and total SKS are summed.  
    - The Semester GPA (IP) is calculated as:  
-     \[
-     IP = \frac{\text{total grade points}}{\text{total SKS}}
-     \]
+                 IP = total grade points/total SKS
    - The final GPA is displayed.
   
 ## 2.4.1. Function Solution
@@ -104,6 +102,73 @@ Main Functionality
 - The program takes input, calculates income, and updates stock after accounting for dead flowers.
 
 ## 2.5.1. Assignment Solution
-The solution is implemented in Selection.java, and below is screenshot of the result.
+The solution is implemented in Carplate.java, Cubecalculate.java, Schedule.java and below is screenshot of the result.
 
+Carplate.java
 
+![Image](https://github.com/user-attachments/assets/38b02fc0-c8c9-4cdb-8fa3-91d5f8e745de)
+![Image](https://github.com/user-attachments/assets/21efcece-21a9-4d1b-a2ac-af87c25133b8)
+![Image](https://github.com/user-attachments/assets/ea327323-d132-463b-b95e-2a684bf52904)
+
+**Brief Explanation:** There are 4 Main Steps:
+1. Define Car Plate Codes and Cities
+   - Two arrays:  
+     - `CODE`: Contains valid plate letters (`A, B, D, etc.`).  
+     - `CITY`: Contains corresponding city names (`BANTEN, JAKARTA, BANDUNG, etc.`).  
+2. User Input
+   - The user enters a single letter representing a car plate code.  
+   - The input is converted to uppercase to ensure case insensitivity.  
+3. City Lookup
+   - The program searches for the input letter in the `CODE` array.  
+   - If found, the corresponding city name from the `CITY` array is displayed.  
+   - If not found, it prints `"Invalid car plate code!"`.  
+4. Program Termination
+   - The scanner is closed, and the program ends.  
+
+Cubecalculate.java
+
+![Image](https://github.com/user-attachments/assets/f6cdc112-b734-4bd2-9355-6034bfde1284)
+![Image](https://github.com/user-attachments/assets/fe757093-e761-4f78-a0ad-ce5234c5fa25)
+![Image](https://github.com/user-attachments/assets/38b57f32-7c9d-48d0-94e2-e8d4d06fe58a)
+
+**Brief Explanation:** There are 4 Main Steps:
+1. Define Calculation Methods  
+   - `volume(double side)`: Computes the cube’s volume \(\text{side}^3\).  
+   - `surfaceArea(double side)`: Computes the surface area \(6 \times \text{side}^2\).  
+   - `perimeter(double side)`: Computes the total edge length \(12 \times \text{side}\).  
+2. User Input
+   - The user enters the side length of the cube.  
+   - The user selects a calculation type (1 = Volume, 2 = Surface Area, 3 = Perimeter).  
+3. Calculation and Output  
+   - The program uses a switch statement to call the corresponding method based on the user's choice.  
+   - The result is printed. If the input is invalid, it displays `"Invalid choice!"`.  
+4. Program Termination
+   - The scanner is closed, and the program ends. 
+
+Schedule.java
+
+![Image](https://github.com/user-attachments/assets/b652031a-714c-409a-a1f4-0727ba9170db)
+
+![Image](https://github.com/user-attachments/assets/f1ee090b-6a36-49ed-ae61-15f727e7dfe2)
+
+**Brief Explanation:** There are 4 Main Steps:
+1. User Input for Course Details 
+   - The user enters the number of courses.  
+   - For each course, the user provides:  
+     - Course name  
+     - Credit hours (SKS)  
+     - Semester  
+     - Lecture day  
+2. Menu-Driven System (Looped Until Exit)  
+   - The user selects an option from the menu:  
+     1. Display All Courses → Lists all entered courses.  
+     2. Display Courses by Day → Shows courses scheduled on a specific day.  
+     3. Display Courses by Semester → Shows courses taken in a specific semester.  
+     4. Search Course by Name → Finds a course based on user input.  
+     5. Exit → Ends the program.  
+3. Course Searching and Filtering
+   - The program uses loops and conditions to match user input with stored course data.  
+   - Case-insensitive comparisons ensure flexibility in searches.
+4. Program Termination
+   - The program keeps running until the user chooses option `5 (Exit)`.  
+   - The scanner is closed before exiting.  
