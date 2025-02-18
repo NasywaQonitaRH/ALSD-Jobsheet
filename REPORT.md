@@ -104,7 +104,7 @@ Main Functionality
 ## 2.5.1. Assignment Solution
 The solution is implemented in Carplate.java, Cubecalculate.java, Schedule.java and below is screenshot of the result.
 
-Carplate.java
+**Carplate.java**
 
 ![Image](https://github.com/user-attachments/assets/38b02fc0-c8c9-4cdb-8fa3-91d5f8e745de)
 ![Image](https://github.com/user-attachments/assets/21efcece-21a9-4d1b-a2ac-af87c25133b8)
@@ -125,7 +125,7 @@ Carplate.java
 4. Program Termination
    - The scanner is closed, and the program ends.  
 
-Cubecalculate.java
+**Cubecalculate.java**
 
 ![Image](https://github.com/user-attachments/assets/f6cdc112-b734-4bd2-9355-6034bfde1284)
 ![Image](https://github.com/user-attachments/assets/fe757093-e761-4f78-a0ad-ce5234c5fa25)
@@ -145,7 +145,7 @@ Cubecalculate.java
 4. Program Termination
    - The scanner is closed, and the program ends. 
 
-Schedule.java
+**Schedule.java**
 
 ![Image](https://github.com/user-attachments/assets/b652031a-714c-409a-a1f4-0727ba9170db)
 
