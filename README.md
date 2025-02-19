@@ -17,7 +17,7 @@ The solution is implemented in Selection.java, and below is screenshot of the re
 **Brief explanaton:** There are 5 main step: 
 1. User Input for Scores
    - The program prompts the user to enter scores for assignments, quizzes, mid-term exams, and final exams.  
-   - The `inputScore` method ensures the entered scores are between 0 and 100. If an invalid score is entered, it returns `-1`.  
+   - The inputScore method ensures the entered scores are between 0 and 100. If an invalid score is entered, it returns -1.  
 2. Final Score Calculation  
    - If any input is invalid, the program prints an error message and stops.  
    - Otherwise, the final score is calculated using weighted averages:  
@@ -26,7 +26,7 @@ The solution is implemented in Selection.java, and below is screenshot of the re
      - 30% from mid-term exams  
      - 30% from final exams  
 3. Letter Grade Assignment  
-   - The `getLetterGrade` method determines the letter grade based on the final score using predefined score ranges.  
+   - The getLetterGrade method determines the letter grade based on the final score using predefined score ranges.  
 4. Pass/Fail Decision  
    - The program prints the final score and letter grade.  
    - If the grade is A, B+, B, C+, or C, the user passes. Otherwise, they fail.  
@@ -42,13 +42,13 @@ The solution is implemented in Looping.java, and below is screenshot of the resu
 **Brief explanaton:** There are 3 main step:
 1. User Input for NIM
    - The user is prompted to enter their NIM.  
-   - The last two digits of the NIM are extracted and converted into an integer (`n`).  
-   - If `n` is less than 10, `10` is added to ensure a minimum value of 10.  
+   - The last two digits of the NIM are extracted and converted into an integer (n).  
+   - If n is less than 10, `10` is added to ensure a minimum value of 10.  
 2. Loop to Print Pattern
-   - A loop runs from `1` to `n`.  
-   - The numbers 6 and 10 are skipped using `continue`.  
+   - A loop runs from 1 to n.  
+   - The numbers 6 and 10 are skipped using continue.  
    - If the number is even, it is printed.  
-   - If the number is odd, an asterisk (`*`) is printed instead.  
+   - If the number is odd, an asterisk (*) is printed instead.  
 3. Program Termination
    - The scanner is closed, and the program ends.
 
@@ -65,8 +65,8 @@ The solution is implemented in Selection.java, and below is screenshot of the re
      - SKS (credit hours)  
      - Numerical grade  
 2. Grade Conversion
-   - The `convertToLetterGrade` method converts numerical grades to letter grades (A, B+, B, etc.).  
-   - The `convertToGradePoints` method assigns grade points based on the letter grade.  
+   - The convertToLetterGrade method converts numerical grades to letter grades (A, B+, B, etc.).  
+   - The convertToGradePoints method assigns grade points based on the letter grade.  
 3. Display Grade Table  
    - A formatted table prints course names, numerical grades, letter grades, and grade points.  
 4. GPA Calculation
@@ -84,19 +84,19 @@ The solution is implemented in Function.java and Function2.java, below is screen
 
 **Brief Explanation:** There are 5 Main Steps:
 1. Initialize Variables and Scanner
-   - A `Scanner` object is created to take user input.  
+   - A Scanner object is created to take user input.  
    - Arrays for flower names, prices, and a 2D array (4x4) for flower stock are initialized.
 2. User Input for Flower Stock  
    - The program prompts the user to enter flower stock for each of the 4 branches.  
-   - The input is stored in the `flowerStock` 2D array.
-3. Calculate and Display Income for Each Branch (`displayIncome` method)  
+   - The input is stored in the flowerStock 2D array.
+3. Calculate and Display Income for Each Branch (displayIncome method)  
    - Loops through each branch and calculates total income based on the stock and price of each flower.  
    - Prints the total revenue if all flowers are sold.
 4. Reduce Stock Due to Flower Deaths  
-   - An array `stockReduction` holds values of stock reduction for RoyalGarden 4.  
-   - The `displayStockAfterDeath` method updates the stock for RoyalGarden 4 and displays the final values.
+   - An array stockReduction holds values of stock reduction for RoyalGarden 4.  
+   - The displayStockAfterDeath method updates the stock for RoyalGarden 4 and displays the final values.
 5. Closing the Scanner  
-   - The `scanner.close();` statement ensures that system resources are freed after input is taken.
+   - The scanner.close(); statement ensures that system resources are freed after input is taken.
 
 Main Functionality
 - The program takes input, calculates income, and updates stock after accounting for dead flowers.
@@ -113,15 +113,15 @@ The solution is implemented in Carplate.java, Cubecalculate.java, Schedule.java 
 **Brief Explanation:** There are 4 Main Steps:
 1. Define Car Plate Codes and Cities
    - Two arrays:  
-     - `CODE`: Contains valid plate letters (`A, B, D, etc.`).  
-     - `CITY`: Contains corresponding city names (`BANTEN, JAKARTA, BANDUNG, etc.`).  
+     - CODE: Contains valid plate letters (A, B, D, etc.).  
+     - CITY: Contains corresponding city names (BANTEN, JAKARTA, BANDUNG, etc.).  
 2. User Input
    - The user enters a single letter representing a car plate code.  
    - The input is converted to uppercase to ensure case insensitivity.  
 3. City Lookup
    - The program searches for the input letter in the `CODE` array.  
    - If found, the corresponding city name from the `CITY` array is displayed.  
-   - If not found, it prints `"Invalid car plate code!"`.  
+   - If not found, it prints "Invalid car plate code!".  
 4. Program Termination
    - The scanner is closed, and the program ends.  
 
@@ -133,15 +133,15 @@ The solution is implemented in Carplate.java, Cubecalculate.java, Schedule.java 
 
 **Brief Explanation:** There are 4 Main Steps:
 1. Define Calculation Methods  
-   - `volume(double side)`: Computes the cube’s volume \(\text{side}^3\).  
-   - `surfaceArea(double side)`: Computes the surface area \(6 \times \text{side}^2\).  
-   - `perimeter(double side)`: Computes the total edge length \(12 \times \text{side}\).  
+   - volume(double side): Computes the cube’s volume \(\text{side}^3\).  
+   - surfaceArea(double side): Computes the surface area \(6 \times \text{side}^2\).  
+   - perimeter(double side): Computes the total edge length \(12 \times \text{side}\).  
 2. User Input
    - The user enters the side length of the cube.  
    - The user selects a calculation type (1 = Volume, 2 = Surface Area, 3 = Perimeter).  
 3. Calculation and Output  
    - The program uses a switch statement to call the corresponding method based on the user's choice.  
-   - The result is printed. If the input is invalid, it displays `"Invalid choice!"`.  
+   - The result is printed. If the input is invalid, it displays "Invalid choice!".  
 4. Program Termination
    - The scanner is closed, and the program ends. 
 
