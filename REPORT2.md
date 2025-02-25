@@ -124,8 +124,3 @@ The solution is implemented in Course.java, CourseMain.java and Lecturer.java, L
 
 ![image](https://github.com/user-attachments/assets/e83948f9-8f65-422e-aa4e-d9aaee686f94)
 
-
-**Question Answer's:** 
-1. 
-2. 
-3. 
