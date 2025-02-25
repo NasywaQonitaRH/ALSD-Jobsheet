@@ -74,6 +74,8 @@ The solution is implemented in Student.java, and below is screenshot of the resu
 
 ![image](https://github.com/user-attachments/assets/ded27cb0-1195-4d82-93bf-a97f097776c6)
 
+![image](https://github.com/user-attachments/assets/57fd4d23-a6af-455e-a2f0-14a78261b4e9)
+
 **Question Answer's:** 
 Here are the answers based on the provided information:
 
@@ -124,3 +126,4 @@ The solution is implemented in Course.java, CourseMain.java and Lecturer.java, L
 
 ![image](https://github.com/user-attachments/assets/e83948f9-8f65-422e-aa4e-d9aaee686f94)
 
+![image](https://github.com/user-attachments/assets/b4933b9f-aab3-407d-a903-228efd11881b)
