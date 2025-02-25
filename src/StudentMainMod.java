@@ -1,5 +1,6 @@
 public class StudentMainMod {
     public static void main(String[] args) {
+        // Creating student1 using default constructor
         Student student1 = new Student();
         student1.studentID = "244107020097";
         student1.name = "Tiara";
@@ -14,9 +15,10 @@ public class StudentMainMod {
         student1.print();
 
         Student student2 = new Student("244107020040", "Rizky", "TI-II", 3.5);
-        
         student2.updateGPA(3.3);
-
         student2.print();
+
+        Student studentNasywa = new Student("244107020170", "Nasywa", "TI-2B", 3.7);
+        studentNasywa.print();
     }
 }
