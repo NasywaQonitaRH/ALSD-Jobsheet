@@ -5,12 +5,17 @@ public class StudentMod {
     double gpa;
 
     public StudentMod() { 
+        // Initialize with default values
+        this.studentID = "Unknown";
+        this.name = "Unknown";
+        this.className = "Unknown";
+        this.gpa = 0.0;
     }
 
     public StudentMod(String id, String name, String cls, double gpa) {
-        studentID = id;
+        this.studentID = id;
         this.name = name;
-        className = cls;
+        this.className = cls;
         this.gpa = gpa;
     }
 
