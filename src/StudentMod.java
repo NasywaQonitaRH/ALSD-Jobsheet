@@ -1,15 +1,17 @@
-public class Student {
+public class StudentMod {
     String studentID;
     String name;
     String className;
     double gpa;
 
-    public Student(String string, String string2, String string3, double d) {
-        //TODO Auto-generated constructor stub
+    public StudentMod() {
     }
 
-    public Student() {
-        //TODO Auto-generated constructor stub
+    public StudentMod(String id, String name, String cls, double gpa) {
+        this.studentID = id;
+        this.name = name;
+        this.className = cls;
+        this.gpa = gpa;
     }
 
     public void print() {
