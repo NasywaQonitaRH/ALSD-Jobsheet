@@ -13,10 +13,10 @@ public class StudentMainMod {
 
         student1.print();
 
-        Student student2 = new Student("244107020040", "Rizky", "TI-II", 3.5);
+        Student studentNasywa = new Student("244107020099", "Nasywa", "TI-2B", 3.7);
         
-        student2.updateGPA(3.3);
+        studentNasywa.updateGPA(3.3);
 
-        student2.print();
+        studentNasywa.print();
     }
 }
