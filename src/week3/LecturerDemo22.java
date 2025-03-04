@@ -2,15 +2,15 @@ package week3;
 
 import java.util.Scanner;
 
-public class LecturerDemoNoPresensi {
+public class LecturerDemo22 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter number of lecturers: ");
         int numLecturers = sc.nextInt();
-        sc.nextLine(); // Consume newline
+        sc.nextLine();
 
-        LecturerNoPresensi[] lecturerArray = new LecturerNoPresensi[numLecturers];
+        Lecturer22[] lecturerArray = new Lecturer22[numLecturers];
 
         for (int i = 0; i < numLecturers; i++) {
             System.out.println("Enter details for Lecturer " + (i + 1) + ":");
@@ -23,26 +23,26 @@ public class LecturerDemoNoPresensi {
             boolean gender = (genderChar == 'M' || genderChar == 'm');
             System.out.print("Age: ");
             int age = sc.nextInt();
-            sc.nextLine(); // Consume newline
+            sc.nextLine(); 
 
-            lecturerArray[i] = new LecturerNoPresensi(id, name, gender, age);
+            lecturerArray[i] = new Lecturer22(id, name, gender, age);
         }
 
         System.out.println("\nAll Lecturer Data:");
-        LecturerDataNoPresensi.showAllLecturerData(lecturerArray);
+        LecturerData22.showAllLecturerData(lecturerArray);
 
         System.out.println("\nNumber of Male Lecturers: " + 
-            LecturerDataNoPresensi.countLecturerByGender(lecturerArray, true));
+            LecturerData22.countLecturerByGender(lecturerArray, true));
         System.out.println("Number of Female Lecturers: " + 
-            LecturerDataNoPresensi.countLecturerByGender(lecturerArray, false));
+            LecturerData22.countLecturerByGender(lecturerArray, false));
 
         System.out.println("\nAverage Age of Male Lecturers: " + 
-            LecturerDataNoPresensi.averageLecturerAgeByGender(lecturerArray, true));
+            LecturerData22.averageLecturerAgeByGender(lecturerArray, true));
         System.out.println("Average Age of Female Lecturers: " + 
-            LecturerDataNoPresensi.averageLecturerAgeByGender(lecturerArray, false));
+            LecturerData22.averageLecturerAgeByGender(lecturerArray, false));
 
-        LecturerDataNoPresensi.showOldestLecturerInfo(lecturerArray);
-        LecturerDataNoPresensi.showYoungestLecturerInfo(lecturerArray);
+        LecturerData22.showOldestLecturerInfo(lecturerArray);
+        LecturerData22.showYoungestLecturerInfo(lecturerArray);
 
         sc.close();
     }
