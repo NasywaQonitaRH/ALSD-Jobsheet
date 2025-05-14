@@ -18,7 +18,7 @@ public class StudentQueueMain {
             System.out.println("0. Exit");
             System.out.print("Choose a menu: ");
             choice = sc.nextInt();
-            sc.nextLine(); // consume newline
+            sc.nextLine();
             
             switch (choice) {
                 case 1:
