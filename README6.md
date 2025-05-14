@@ -149,12 +149,49 @@ The solution is implemented in SumMain.java, and below is screenshot of the resu
 
 ![image](https://github.com/user-attachments/assets/520639e5-ed43-46b5-a55d-e019088d5512)
 
+### 6.3.8 Verification of Experiment Results
+
+![image](https://github.com/user-attachments/assets/4b42ddab-9a33-4d4f-96f0-fcbe9459edd9)
+
 
 **Question Answer's:**  
-1. 
+
+The code snippet finds the smallest GPA in the unsorted portion of the list. It initializes minIndex as i (current element) and checks the remaining elements (j = i + 1 to idx). If a smaller GPA is found, minIndex is updated. This is the core step of Selection Sort, which selects the minimum value in each pass and places it in the correct position.
+
+### 6.3.12 Verification of Experiment Results
+
+![image](https://github.com/user-attachments/assets/f5508869-2fce-46cf-8500-2128341ec8a0)
 
 
+### 6.3.13 Question
 
+```
+public void insertionSort() {
+    for (int i = 1; i < idx; i++) {
+        Student key = listStudents[i];
+        int j = i - 1;
+
+        // Change condition to sort in descending order (>= to <=)
+        while (j >= 0 && listStudents[j].gpa < key.gpa) {
+            listStudents[j + 1] = listStudents[j];
+            j--;
+        }
+        listStudents[j + 1] = key;
+    }
+}
+```
 
 ## 5.5 Assignments
-The solution is implemented in StudentGrades.java, below is screenshot of the result.
+The solution is implemented in; 
+1. Lecturer.java – Contains the Lecturer class.
+2. LecturerData.java – Manages lecturer data and sorting methods.
+3. Main.java – Contains the main method for user interaction.
+
+below is screenshot of the result.
+
+
+![image](https://github.com/user-attachments/assets/cd218a57-4b93-476f-a234-69ff8e8ff55c)
+
+
+
+
