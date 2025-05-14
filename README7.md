@@ -1,9 +1,9 @@
 |  | Algorithm and Data Structure |
 |--|--|
-| NIM |  244107020023|
-| Nama |  Dewi Chalissa Rania |
+| NIM |  244107020170|
+| Nama |  Nasywa Qonita RH |
 | Kelas | TI - 1I |
-| Repository | [link] ([https://github.com/ichaxpro/Algoritma-dan-Struktur-Data.git](https://github.com/NasywaQonitaRH/ALSD-Jobsheet) |
+| Repository | [link] (https://github.com/NasywaQonitaRH/ALSD-Jobsheet) |
 
 # Labs #1 Programming Fundamentals Review
 
