@@ -13,8 +13,7 @@ public class Student {
         className = kls;
         gpa = ip;
     }
-
-    void print() {
-        System.out.println(nim + " - " + name + " - " + className + " - " + gpa);
+    void print(){
+        System.out.println(nim+ " - "+name+" - "+className+" - "+gpa);
     }
 }

@@ -5,16 +5,14 @@ public class Node {
     Node prev;
     Node next;
 
-    Node() {
+    Node(){
     }
-
-    Node(Student data) {
+    Node(Student data){
         this.data = data;
         prev = null;
         next = null;
     }
-
-    Node(Node prev, Student data, Node next) {
+    Node(Node prev, Student data, Node next){
         this.data = data;
         this.prev = prev;
         this.next = next;
