@@ -2,31 +2,32 @@ package P13;
 
 public class DoubleLinkedLists {
     Node head;
-    Node tail;    
+    Node tail;
 
-    DoubleLinkedLists(){
+    DoubleLinkedLists() {
         head = null;
         tail = null;
     }
-    boolean isEmpty(){
+
+    boolean isEmpty() {
         return head == null;
     }
-    void addFirst(Student data){
+
+    void addFirst(Student data) {
         Node newNode = new Node(data);
-        if (isEmpty()){
-            head = newNode;
-            tail = newNode;
+        if (isEmpty()) {
+            head = tail = newNode;
         } else {
             newNode.next = head;
             head.prev = newNode;
             head = newNode;
         }
     }
-    void addLast(Student data){
+
+    void addLast(Student data) {
         Node newNode = new Node(data);
-        if (isEmpty()){
-            head = newNode;
-            tail = newNode;
+        if (isEmpty()) {
+            head = tail = newNode;
         } else {
             tail.next = newNode;
             newNode.prev = tail;
@@ -34,39 +35,39 @@ public class DoubleLinkedLists {
         }
     }
 
-    void insertAfter(String key, Student data){
-        Node newNode = new Node(data);
-        Node temp = head;
-        while(temp!= null) {
-            if(temp.data.nim.equalsIgnoreCase(key)){
-                if(temp == tail){
-                    addLast(data);
-                } else {
-                    newNode.next = temp.next;
-                    newNode.prev = temp;
-                    temp.next.prev = newNode;
-                    temp.next = newNode;
-                }
+    void insertAfter(String key, Student data) {
+    Node newNode = new Node(data);
+    Node temp = head;
+    
+    while (temp != null) {
+        if (temp.data.nim.equalsIgnoreCase(key)) {
+            if (temp == tail) {
+                addLast(data);
+            } else {
+                newNode.next = temp.next;
+                newNode.prev = temp;
+                temp.next.prev = newNode;
+                temp.next = newNode;
             }
-            temp = temp.next;
+            return; // Exit after successful insertion
         }
-        if(temp == null){
-            System.out.println("Insertion Failed. Data ("+key+") not found");
-        }
+        temp = temp.next;
     }
+    
+    // If temp reaches null, the key was not found
+    System.out.println("Insertion failed. Data (" + key + ") not found!");
+}
 
-    void print(){
-        if(!isEmpty()){
+    void print() {
+        if (!isEmpty()) {
             Node temp = head;
-            while(temp != null){
+            while (temp != null) {
                 temp.data.print();
                 temp = temp.next;
             }
-            System.out.println(" ");
+            System.out.println("");
         } else {
-            System.out.println("Double linked list is currently empty");
+            System.out.println("Double linked list is currently empty!");
         }
     }
 }
-
-
