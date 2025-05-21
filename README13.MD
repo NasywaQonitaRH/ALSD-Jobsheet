@@ -5,7 +5,7 @@
 | Kelas | TI - 1I |
 | Repository | [link] (https://github.com/NasywaQonitaRH/ALSD-Jobsheet) |
 
-# Labs #13 DoubleLinkedLists
+# Labs #13 Double Linked Lists
 
 ## 12.2.1 Experiment 1 - Actuvity 1
 ### Verification Experiment Result
@@ -35,3 +35,54 @@ Implemented in the print() method using temp = temp.next, which moves through th
 If the key is found at the tail, the new node is added at the end.
 9. Purpose of if(temp.data.nim.equalsIgnoreCase(key)) in insertAfter():
 It checks if the current node contains the specified key before inserting a new node.
+
+
+## 12.3.1 Experiment 1 - Activity 2
+### Verification Experiment Result
+The solution is implemented in Student.java, Node.java, DoubleLinkedLists.java and DoubleLinkedListsMain.java, that have been implemented. 
+
+Below is screenshot of the result.
+
+![Image](https://github.com/user-attachments/assets/75d58b9f-238d-4879-adea-2ddebe45be66)
+
+## Answer to Question
+1. Purpose of head = head.next; head.prev = null;:
+- Moves head pointer to next node and removes reference to old head
+- Sets new head's prev to null to maintain list integrity
+2. Importance of else if(head == tail){ head = tail = null; }:
+- Handles special case when list has only one node
+- Ensures proper cleanup when removing the only node
+3. Approach without tail attribute:
+- Would need to traverse from head to find last node before removal
+- Would be less efficient (O(n) vs O(1) with tail)
+4. Purpose of initial if(isEmpty()) check:
+- Prevents operations on empty list
+- Provides appropriate error message
+5. Handling removal at beginning and end:
+- For index 0: calls removeFirst()
+- For last node: calls removeLast()
+- Both handle their special cases appropriately
+6. Updating middle node links:
+- temp.prev.next = temp.next bypasses temp from previous node
+- temp.next.prev = temp.prev bypasses temp from next node
+7. Added index validation:
+- Added checks for negative index and index exceeding size
+- Added appropriate error messages
+
+
+## Assignments
+The solution is implemented in Student.java, Node.java, DoubleLinkedLists.java and DoubleLinkedListsMain.java.
+
+![Image](https://github.com/user-attachments/assets/9b9e87f1-931c-4652-bb2c-6e0e89c977ef)
+
+**Brief Explanation: **
+1. All basic operations (addFirst, addLast, isEmpty)
+2. All assignment methods:
+    - add(index, data) - Insert at specific position
+    - removeAfter(key) - Remove node after specified key
+    - getFirst(), getLast(), get(index) - Data retrieval
+    - size() - Returns list size
+    - indexOf(key) - Finds position by NIM
+3. Proper error handling
+4. Size tracking
+5. Comprehensive test cases
