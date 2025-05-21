@@ -75,7 +75,7 @@ The solution is implemented in Student.java, Node.java, DoubleLinkedLists.java a
 
 ![Image](https://github.com/user-attachments/assets/9b9e87f1-931c-4652-bb2c-6e0e89c977ef)
 
-**Brief Explanation: **
+Brief Explanation:
 1. All basic operations (addFirst, addLast, isEmpty)
 2. All assignment methods:
     - add(index, data) - Insert at specific position
