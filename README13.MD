@@ -13,3 +13,4 @@ The solution is implemented in Student.java, Node.java, DoubleLinkedLists.java a
 
 Below is screenshot of the result.
 
+![Image](https://github.com/user-attachments/assets/f1ccd8f1-62bd-4cfe-ae46-ec54040d6268)
