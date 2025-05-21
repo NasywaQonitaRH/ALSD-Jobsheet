@@ -3,17 +3,20 @@ package P13;
 public class DoubleLinkedLists {
     Node head;
     Node tail;
+    int size;
 
-    DoubleLinkedLists() {
+    public DoubleLinkedLists() {
         head = null;
         tail = null;
+        size = 0;
     }
 
-    boolean isEmpty() {
+    // Basic Methods
+    public boolean isEmpty() {
         return head == null;
     }
 
-    void addFirst(Student data) {
+    public void addFirst(Student data) {
         Node newNode = new Node(data);
         if (isEmpty()) {
             head = tail = newNode;
@@ -22,9 +25,10 @@ public class DoubleLinkedLists {
             head.prev = newNode;
             head = newNode;
         }
+        size++;
     }
 
-    void addLast(Student data) {
+    public void addLast(Student data) {
         Node newNode = new Node(data);
         if (isEmpty()) {
             head = tail = newNode;
@@ -33,81 +37,123 @@ public class DoubleLinkedLists {
             newNode.prev = tail;
             tail = newNode;
         }
+        size++;
     }
 
-    void insertAfter(String key, Student data) {
+    // Assignment Methods
+    public void add(int index, Student data) {
+        if (index < 0 || index > size) {
+            System.out.println("Invalid index!");
+            return;
+        }
+        if (index == 0) {
+            addFirst(data);
+            return;
+        }
+        if (index == size) {
+            addLast(data);
+            return;
+        }
+
         Node newNode = new Node(data);
-        Node temp = head;
-        while (temp != null) {
-            if (temp.data.nim.equalsIgnoreCase(key)) {
-                if (temp == tail) {
-                    addLast(data);
+        Node current = head;
+        for (int i = 0; i < index - 1; i++) {
+            current = current.next;
+        }
+        newNode.next = current.next;
+        newNode.prev = current;
+        current.next.prev = newNode;
+        current.next = newNode;
+        size++;
+    }
+
+    public void removeAfter(String key) {
+        if (isEmpty()) {
+            System.out.println("List is empty!");
+            return;
+        }
+
+        Node current = head;
+        while (current != null) {
+            if (current.data.nim.equals(key)) {
+                if (current.next == null) {
+                    System.out.println("No node after " + key + " to remove!");
                 } else {
-                    newNode.next = temp.next;
-                    newNode.prev = temp;
-                    temp.next.prev = newNode;
-                    temp.next = newNode;
+                    if (current.next == tail) {
+                        removeLast();
+                    } else {
+                        current.next = current.next.next;
+                        current.next.prev = current;
+                    }
+                    size--;
                 }
-                break;
+                return;
             }
-            temp = temp.next;
+            current = current.next;
         }
-        if (temp == null) {
-            System.out.println("Insertion failed. Data(" + key + ")not found!!");
-        }
+        System.out.println("Key " + key + " not found!");
     }
 
-    void print() {
-        if (!isEmpty()) {
-            Node temp = head;
-            while (temp != null) {
-                temp.data.print();
-                temp = temp.next;
-            }
-            System.out.println(" ");
-        } else {
-            System.out.println("Double linked list is currently empty!!");
-        }
+    private void removeLast() {
+        throw new UnsupportedOperationException("Unimplemented method 'removeLast'");
     }
 
-    void removeFirst() {
+    public Student getFirst() {
         if (isEmpty()) {
-            System.out.println("Double linked list is currently empty!!");
-        } else if (head == tail) {
-            head = tail = null;
-        } else {
-            head = head.next;
-            head.prev = null;
+            System.out.println("List is empty!");
+            return null;
         }
+        return head.data;
     }
 
-    void removeLast() {
+    public Student getLast() {
         if (isEmpty()) {
-            System.out.println("Double linked list is currentlyempty!!");
-        } else if (head == tail) {
-            head = tail = null;
-        } else {
-            tail = tail.prev;
-            tail.next = null;
+            System.out.println("List is empty!");
+            return null;
         }
+        return tail.data;
     }
 
-    void remove(int index) {
-        if (isEmpty()) {
-            System.out.println("Double linked list is currentlyempty!!");
-        } else if (index == 0) {
-            removeFirst();
-        } else {
-            Node temp = head;
-            for (int i = 0; i < index; i++) {
-                temp = temp.next;
-            }
-            if (temp == tail) {
-                removeLast();
-            } else {
-                temp.prev.next = temp.next;
-                temp.next.prev = temp.prev;
-            }
+    public Student get(int index) {
+        if (index < 0 || index >= size) {
+            System.out.println("Invalid index!");
+            return null;
         }
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current.data;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public int indexOf(String key) {
+        Node current = head;
+        int index = 0;
+        while (current != null) {
+            if (current.data.nim.equals(key)) {
+                return index;
+            }
+            current = current.next;
+            index++;
+        }
+        return -1;
+    }
+
+    // Print method
+    public void print() {
+        if (isEmpty()) {
+            System.out.println("List is empty!");
+            return;
+        }
+        Node current = head;
+        while (current != null) {
+            current.data.print();
+            current = current.next;
+        }
+        System.out.println();
     }
 }

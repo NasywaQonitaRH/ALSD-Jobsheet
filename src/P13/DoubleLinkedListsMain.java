@@ -3,24 +3,35 @@ package P13;
 public class DoubleLinkedListsMain {
     public static void main(String[] args) {
         DoubleLinkedLists dll = new DoubleLinkedLists();
+
+        System.out.println("=== Initial List ===");
         dll.print();
-        dll.addFirst(new Student("111", "Anton", "TI-1I", 3.75));
+
+        System.out.println("=== Adding Students ===");
+        dll.addFirst(new Student("111", "Anton", "TI-1", 3.5));
+        dll.addLast(new Student("112", "Budi", "TI-2", 3.7));
+        dll.add(1, new Student("113", "Cindy", "TI-3", 3.9));
         dll.print();
-        dll.addLast(new Student("112", "Prabowo", "TI-1I", 3.7));
+
+        System.out.println("=== Assignment Methods ===");
+        System.out.println("First student: ");
+        dll.getFirst().print();
+
+        System.out.println("Last student: ");
+        dll.getLast().print();
+
+        System.out.println("Student at index 1: ");
+        dll.get(1).print();
+
+        System.out.println("Size of list: " + dll.size());
+        System.out.println("Index of 112: " + dll.indexOf("112"));
+
+        System.out.println("\n=== Remove After 111 ===");
+        dll.removeAfter("111");
         dll.print();
-        dll.addFirst(new Student("113", "Herco", "TI-1I", 3.89));
-        dll.print();
-        dll.insertAfter("111", new Student("114", "Rizki", "TI-1I", 3.8));
-        dll.print();
-        dll.insertAfter("112", new Student("115", "Hanzel", "TI-1I", 3.6));
-        dll.print();
-        dll.insertAfter("120", new Student("116", "Eiyu", "TI-1I", 3.4));
-        dll.print();
-        dll.removeFirst();
-        dll.print();
-        dll.removeLast();
-        dll.print();
-        dll.remove(1);
-        dll.print();
+
+        System.out.println("=== Final Operations ===");
+        dll.removeAfter("999"); // Non-existent key
+        System.out.println("Size after operations: " + dll.size());
     }
 }
