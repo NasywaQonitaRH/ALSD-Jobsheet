@@ -84,6 +84,10 @@ public class SingleLinkedList22 {
         Node22 tmp = head;
         for (int i = 0; i < idx; i++) {
             tmp = tmp.next;
+            if (tmp == null) {
+                System.out.println("Index out of bounds!");
+                return null;
+            }
         }
         return tmp.data;
     }
@@ -136,34 +140,57 @@ public class SingleLinkedList22 {
             System.out.println("LinkedList is empty!!");
         } else {
             Node22 temp = head;
-            while (temp != null) {
-                if ((temp.data.name.equalsIgnoreCase(key)) && (temp == head)) {
-                    removeFirst();
-                    break;
-                } else if (temp.next.data.name.equalsIgnoreCase(key)) {
-                    temp.next = temp.next.next;
-                    if (temp.next == null) {
-                        tail = temp;
-                    }
-                    break;
-                }
+            Node22 prev = null;
+            
+            if (temp != null && temp.data.name.equalsIgnoreCase(key)) {
+                removeFirst();
+                return;
+            }
+            
+            while (temp != null && !temp.data.name.equalsIgnoreCase(key)) {
+                prev = temp;
                 temp = temp.next;
+            }
+            
+            if (temp == null) {
+                System.out.println("Student not found!");
+                return;
+            }
+            
+            prev.next = temp.next;
+            
+            if (temp == tail) {
+                tail = prev;
             }
         }
     }
 
     void removeAt(int index) {
+        if (isEmpty()) {
+            System.out.println("LinkedList is empty!!");
+            return;
+        }
+        
         if (index == 0) {
             removeFirst();
-        } else {
-            Node22 temp = head;
-            for (int i = 0; i < index - 1; i++) {
-                temp = temp.next;
-            }
-            temp.next = temp.next.next;
-            if (temp.next == null) {
-                tail = temp;
-            }
+            return;
+        }
+        
+        Node22 temp = head;
+        for (int i = 0; temp != null && i < index - 1; i++) {
+            temp = temp.next;
+        }
+        
+        if (temp == null || temp.next == null) {
+            System.out.println("Index out of bounds!");
+            return;
+        }
+        
+        Node22 next = temp.next.next;
+        temp.next = next;
+        
+        if (next == null) {
+            tail = temp;
         }
     }
 }
