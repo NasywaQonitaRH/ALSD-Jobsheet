@@ -1,6 +1,6 @@
 package WEEK10;
 
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public class ExcuseLetterDemo22 {
     @SuppressWarnings("resource")
